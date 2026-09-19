@@ -1,5 +1,7 @@
 # NewmarkRiskRadar
 
+[![CI](https://github.com/nambatipudi/newmark-riskradar/actions/workflows/ci.yml/badge.svg)](https://github.com/nambatipudi/newmark-riskradar/actions/workflows/ci.yml)
+
 An active underwriting and triage engine for commercial real estate loan portfolios. RiskRadar ingests raw loan data, runs deterministic financial mathematics, and categorizes loans into actionable risk tiers — Critical Default, Elevated Risk, and Performing — with a Pro-Forma Stress Test Simulator.
 
 ## Documentation
@@ -139,6 +141,13 @@ cd ../NewmarkRiskRadar-UI && npm test && npm run lint && npm run typecheck
 cd NewmarkRiskRadar-API; dotnet test Newmark.RiskRadar.sln
 cd ..\NewmarkRiskRadar-UI; npm test; npm run lint; npm run typecheck
 ```
+
+### Continuous integration
+
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every push and pull request to
+`main`: the .NET suites in Release, then the UI lint, typecheck, tests and production build, and
+finally a build of both container images to prove the Dockerfiles still work. Test results are
+uploaded as an artefact.
 
 ---
 
