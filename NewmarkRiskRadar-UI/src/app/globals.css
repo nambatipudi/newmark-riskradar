@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 40% 6%;
+    --foreground: 0 0% 100%;
+
+    --card: 224 30% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 224 30% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --muted: 224 20% 16%;
+    --muted-foreground: 215 20% 65%;
+
+    --border: 224 20% 20%;
+    --input: 224 20% 20%;
+
+    /* Semantic risk palette: critical, elevated, performing. */
+    --destructive: 350 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 35 100% 55%;
+    --warning-foreground: 224 40% 6%;
+    --success: 142 70% 45%;
+    --success-foreground: 224 40% 6%;
+
+    /* Derived from the palette above; not part of the supplied spec. */
+    --secondary: 224 20% 16%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 224 20% 16%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.35rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* Tabular figures keep columns of balances and ratios aligned. */
+    font-feature-settings: "tnum" 1;
+  }
+}
